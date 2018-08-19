@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Event = require('../models/Events.js');
+var Book = require('../models/Book.model');
 
 /* GET ALL BOOKS */
 router.get('/', function(req, res, next) {
-  debugger;
-  Event.find(function (err, products) {
+  //debugger;
+  Book.find(function (err, products) {
     if (err) return next(err);
     res.json(products);
   });
@@ -14,8 +14,8 @@ router.get('/', function(req, res, next) {
 
 /* GET SINGLE BOOK BY ID */
 router.get('/:id', function(req, res, next) {
-  debugger;
-  Event.findById(req.params.id, function (err, post) {
+  //debugger;
+  Book.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -24,7 +24,7 @@ router.get('/:id', function(req, res, next) {
 /* SAVE BOOK */
 router.post('/', function(req, res, next) {
   debugger;
-  Event.create(req.body, function (err, post) {
+  Book.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -33,7 +33,7 @@ router.post('/', function(req, res, next) {
 /* UPDATE BOOK */
 router.put('/:id', function(req, res, next) {
   debugger;
-  Event.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     debugger;
     if (err) return next(err);
     res.json(post);
@@ -43,7 +43,7 @@ router.put('/:id', function(req, res, next) {
 /* DELETE BOOK */
 router.delete('/:id', function(req, res, next) {
   debugger;
-  Event.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Book.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

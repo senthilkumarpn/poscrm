@@ -4,8 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var book = require('./routes/book');
-var event = require('./routes/events');
+const mongodbAPI = require("./server/routes/mongodb/mongo.api");
+var book = require('./server/routes/book');
+var event = require('./server/routes/events');
+
 var app = express();
 
 var mongoose = require('mongoose');
@@ -23,6 +25,9 @@ app.use('/books', express.static(path.join(__dirname, 'dist/poscrm')));
 app.use('/book', book);
 app.use('/events', express.static(path.join(__dirname, 'dist/poscrm')));
 app.use('/event', event);
+
+// API location
+app.use('/mongodb', mongodbAPI);
 
 
 // catch 404 and forward to error handler
