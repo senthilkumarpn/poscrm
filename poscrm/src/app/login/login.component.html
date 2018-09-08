@@ -1,0 +1,26 @@
+
+<div style="display:flex; align-items:center; justify-content:center; height:100%">
+  
+  <form #loginform="ngForm"  (ngSubmit)="OnLoginSubmit()">
+  <p-panel header="Login">
+    <label>Welcome to POS CRM !</label>
+    <div  style="display:flex; align-items:center; justify-content:center; flex-direction:column">
+      <div class="ui-inputgroup">
+   <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span> <input [(ngModel)]="login.username" type="text" pInputText placeholder="Username" name="username" />
+      </div>
+    
+    <br>
+    <div class="ui-inputgroup">
+   <span class="ui-inputgroup-addon"><i class="fa fa-lock"></i></span> 
+   <input [(ngModel)]="login.password" type="password" pPassword placeholder="Password" name="password" />
+    </div>
+    <br>
+    <div class="ui-inputgroup">
+      <button [disabled]="!loginform.form.valid"  pButton type="submit" label="Login" class="ui-button-success" ></button>
+      <button   pButton type="reset" label="Reset" class="ui-button-secondary" ></button>
+    </div>
+    </div>
+  </p-panel>
+</form>
+  </div>
+  

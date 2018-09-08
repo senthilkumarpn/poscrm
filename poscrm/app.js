@@ -28,7 +28,8 @@ app.use('/event', event);
 
 // API location
 app.use('/mongodb', mongodbAPI);
-
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

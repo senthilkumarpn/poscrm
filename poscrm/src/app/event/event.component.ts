@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { MessageService } from '../Service/index';
+import { MessageService } from '../_services/index';
 
 
 
