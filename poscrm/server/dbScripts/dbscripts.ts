@@ -28,3 +28,6 @@ db.payments.insert(
         "createdby":"senthilKumar","createdOn":"29.07.2018 08:00","updatedby":"senthilkumar","updatedOn":"29.07.2018 00:00","status":true,
     }
 );
+//https://stackblitz.com/edit/angular-6-jwt-authentication-example?file=app%2Flogin%2Flogin.component.ts
+//http://jasonwatmore.com/post/2018/05/23/angular-6-jwt-authentication-example-tutorial
+//https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
